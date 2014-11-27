@@ -8,11 +8,10 @@ Built by Julius Semenas
 License 
 ------------------
  
-This software is free software and carries a MIT license.
+This software is free and carries a MIT license.
  
  
 ------------------
- .
-..:
+
  
 Copyright (c) 2014 Julius Semenas
