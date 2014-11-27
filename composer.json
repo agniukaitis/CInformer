@@ -1,0 +1,18 @@
+{
+    "name": "CInformer",    
+    "type": "library",
+    "description": "A class for displaying messages via flash memory",
+    "keywords": ["flash", "messages"],
+    "homepage": "https://github.com/agniukaitis/CInformer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julius Semenas",
+            "email": "semius@gmail.com",
+            "role": "Student"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    }
+}
