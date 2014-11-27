@@ -1,5 +1,5 @@
 {
-    "name": "CInformer",    
+    "name": "Olive/CInformer",    
     "type": "library",
     "description": "A class for displaying messages via flash memory",
     "keywords": ["flash", "messages"],
