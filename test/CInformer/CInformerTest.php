@@ -133,8 +133,8 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         //check if the flash session variable is empty
         $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
         $informer->clear();
-        $res = $_SESSION['flash'];
-        $exp = null;
-        $this->assertEquals($res, $exp, "The flash session was not properly resetted");
+        $res = count($_SESSION['flash']);
+        $exp = 0;
+        $this->assertEquals($res, $exp, "The flash session is not empty");
     }
 }
