@@ -23,7 +23,7 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($res, $exp, "The class was not initiated correctly");
 
         // check if the $informer is instance of CInformer class
-        $res = $informer instanceof 'CInformer';
+        $res = $informer instanceof CInformer;
         $exp = true;
         $this->assertEquals($res, $exp, "Informer is of incorrect class");
     }
