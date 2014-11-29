@@ -69,8 +69,4 @@ class CInformer
         $_SESSION['flash'] = null;
         return true;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master
