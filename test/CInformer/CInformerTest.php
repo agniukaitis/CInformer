@@ -118,6 +118,7 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         $informer = new \Olive\cinformer\CInformer();
 
         // check if the method executed correctly
+        $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
         $res = $informer->clear();
         $exp = true;
         $this->assertEquals($res, $exp, "The clear function did not return true");
