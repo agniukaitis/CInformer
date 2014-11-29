@@ -26,7 +26,7 @@ class CInformer
     /**
      * Set the message into session variable
      *
-     * @return void
+     * @return boolean
      */
     public function setMessage($data)
     {
@@ -63,6 +63,7 @@ class CInformer
     /**
      * Clear the session variable content
      *
+     * @return boolean
      */
     public function clear()
     {
