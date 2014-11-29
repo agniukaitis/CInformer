@@ -12,7 +12,7 @@ class CInformer
     /**
      * Properties
      */
-    private $valid = ['info', 'error', 'success', 'warning'];
+    public $valid = array();
 
 
     /**
@@ -22,13 +22,14 @@ class CInformer
      */
     public function __construct()
     {
-        //
+        $this->valid = ['info', 'error', 'success', 'warning'];
     }
 
     
     /**
      * Set the message into session variable
      *
+     * @return void
      */
     public function setMessage($data)
     {
@@ -44,11 +45,14 @@ class CInformer
 
         $_SESSION['flash']['type'] = $data['type'];
         $_SESSION['flash']['message'] = $data['message'];
+
+        return true;
     }
 
     /**
      * Get the message from the session variable
      *
+     * @return array $flash that contains the message type and the message string
      */
     public function getMessage()
     {
