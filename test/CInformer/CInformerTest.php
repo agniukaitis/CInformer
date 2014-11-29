@@ -8,6 +8,27 @@ namespace Olive\CInformer;
 class CInformerTest extends \PHPUnit_Framework_TestCase
 {
     /**
+     * Test class
+     *
+     * @return void
+     *
+     */
+    public function testClass()
+    {
+        $informer = new \Olive\cinformer\CInformer();
+
+        // check if the $informer is an object
+        $res = is_object($informer);
+        $exp = true;
+        $this->assertEquals($res, $exp, "The class was not initiated correctly");
+
+        // check if the $informer is instance of CInformer class
+        $res = $informer instanceof 'CInformer';
+        $exp = true;
+        $this->assertEquals($res, $exp, "Informer is of incorrect class");
+    }
+
+    /**
      * Test __construct
      *
      * @return void
