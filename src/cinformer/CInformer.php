@@ -71,3 +71,4 @@ class CInformer
         return true;
     }
 }
+?>
