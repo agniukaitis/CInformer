@@ -12,7 +12,7 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
      * @return void
      *
      */
-    public function testGetName()
+    public function testClear()
     {
         $informer = new \Olive\CInformer\CInformer();
         $res = $informer->clear();
