@@ -46,7 +46,7 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         // check if the flash session variable contains correct type value
         $res = $_SESSION['flash']['type'];
         $exp = 'info';
-        $this->assertEquals($res, $exp, "The session variable contain incorrect type");
+        $this->assertEquals($res, $exp, "The session variable contains incorrect type");
 
         // check if the flash session variable contains correct message value
         $res = $_SESSION['flash']['message'];
@@ -65,6 +65,12 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         $informer = new \Olive\cinformer\CInformer();
         $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
 
+        // checks if the return arrau is correct length
+        $res = count($informer->getMessage());
+        $exp = 2;
+        $this->assertEquals($res, $exp, "The flash variable is incorrect length");
+
+        // check if the array was set correctly when retrieving from session variable
         $res = $informer->getMessage();
         $exp = array('type' => 'info', 'message' => 'myMessage');
         $this->assertEquals($res, $exp, "The message was not retrieved properly");
@@ -80,8 +86,15 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
     {
         $informer = new \Olive\cinformer\CInformer();
 
+        // check if the method executed correctly
         $res = $informer->clear();
         $exp = true;
+        $this->assertEquals($res, $exp, "The clear function did not return true");
+
+        // check if the flash session variable was set to null
+        $informer->clear();
+        $res = $_SESSION['flash'];
+        $exp = null;
         $this->assertEquals($res, $exp, "The clear function did not return true");
     }
 }
