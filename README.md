@@ -19,7 +19,7 @@ Usage
 ------------------
 The module is written primarily for Anax-MVC. TO include the module into your project use:
 
-<code>$di->set('informer', '\Olive\CInformer\CInformer');</code>
+<code>$di->set('informer', '\Olive\cinformer\CInformer');</code>
 
 The module is compatible with any other PHP framework as well.
 
