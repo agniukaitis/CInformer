@@ -33,9 +33,12 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         $informer = new \Olive\cinformer\CInformer();
 
         $res = $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
-
         $exp = true;
         $this->assertEquals($res, $exp, "The message was not set properly");
+
+        $res = isset($_SESSION['flash']);
+        $exp = true;
+        $this->assertEquals($res, $exp, "The session variable was not set");
     }
 
     /**
