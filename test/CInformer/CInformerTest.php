@@ -17,6 +17,7 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
     {
         $informer = new \Olive\cinformer\CInformer();
         
+        // check if $valid array is correct length
         $res = count($informer->valid);
         $exp = 4;
         $this->assertEquals($res, $exp, "Valid array does not contain expected number of indexes");
@@ -32,13 +33,25 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
     {
         $informer = new \Olive\cinformer\CInformer();
 
+        // check if the method is executed correctly
         $res = $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
         $exp = true;
         $this->assertEquals($res, $exp, "The message was not set properly");
 
+        // check if the flash session variable is set
         $res = isset($_SESSION['flash']);
         $exp = true;
         $this->assertEquals($res, $exp, "The session variable was not set");
+
+        // check if the flash session variable contains correct type value
+        $res = $_SESSION['flash']['type'];
+        $exp = 'info';
+        $this->assertEquals($res, $exp, "The session variable contain incorrect type");
+
+        // check if the flash session variable contains correct message value
+        $res = $_SESSION['flash']['message'];
+        $exp = 'myMessage';
+        $this->assertEquals($res, $exp, "The session variable contain incorrect message");
     }
 
     /**
@@ -50,7 +63,6 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
     public function testGetMessage()
     {
         $informer = new \Olive\cinformer\CInformer();
-
         $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
 
         $res = $informer->getMessage();
@@ -67,6 +79,7 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
     public function testClear()
     {
         $informer = new \Olive\cinformer\CInformer();
+
         $res = $informer->clear();
         $exp = true;
         $this->assertEquals($res, $exp, "The clear function did not return true");
