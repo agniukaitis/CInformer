@@ -8,12 +8,10 @@ namespace Olive\CInformer;
  */
 class CInformer
 {
-
     /**
      * Properties
      */
     public $valid = array();
-
 
     /**
      * Constructor for CInformer.
@@ -25,7 +23,6 @@ class CInformer
         $this->valid = ['info', 'error', 'success', 'warning'];
     }
 
-    
     /**
      * Set the message into session variable
      *
@@ -70,8 +67,6 @@ class CInformer
     public function clear()
     {
         $_SESSION['flash'] = null;
-        
         return true;
     }
-
 }
