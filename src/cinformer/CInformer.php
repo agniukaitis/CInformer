@@ -12,7 +12,7 @@ class CInformer
     /**
      * Properties
      */
-    public $valid = ['info', 'error', 'success', 'warning'];
+    private $valid = ['info', 'error', 'success', 'warning'];
 
 
     /**
@@ -52,6 +52,7 @@ class CInformer
      */
     public function getMessage()
     {
+        $flash = array();
         $flash['type'] = $_SESSION['flash']['type'];
         $flash['message'] = $_SESSION['flash']['message'];
 
