@@ -123,9 +123,17 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($res, $exp, "The clear function did not return true");
 
         // check if the flash session variable was set to null
+        $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
+        $informer->clear();
+        $res = is_array($_SESSION['flash']);
+        $exp = true;
+        $this->assertEquals($res, $exp, "The flash session is not an array");
+
+        //check if the flash session variable is empty
+        $informer->setMessage(['type' => 'default', 'message' => 'myMessage']);
         $informer->clear();
         $res = $_SESSION['flash'];
         $exp = null;
-        $this->assertEquals($res, $exp, "The clear function did not return true");
+        $this->assertEquals($res, $exp, "The flash session was not properly resetted");
     }
 }
