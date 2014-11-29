@@ -65,6 +65,8 @@ class CInformer
     public function clear()
     {
         $_SESSION['flash'] = null;
+        
+        return true;
     }
 
 }
