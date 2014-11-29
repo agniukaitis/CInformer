@@ -21,6 +21,11 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         $res = count($informer->valid);
         $exp = 4;
         $this->assertEquals($res, $exp, "Valid array does not contain expected number of indexes");
+
+        // check if $valid array contains correct values
+        $res = $informer->valid;
+        $exp = ['info', 'error', 'success', 'warning'];
+        $this->assertEquals($res, $exp, "Valid array does not contain correct values");
     }
 
     /**
@@ -42,6 +47,11 @@ class CInformerTest extends \PHPUnit_Framework_TestCase
         $res = isset($_SESSION['flash']);
         $exp = true;
         $this->assertEquals($res, $exp, "The session variable was not set");
+
+        // check if the flash session variable is an array
+        $res = is_array($_SESSION['flash']);
+        $exp = true;
+        $this->assertEquals($res, $exp, "The session variable is an array");
 
         // check if the flash session variable contains correct type value
         $res = $_SESSION['flash']['type'];

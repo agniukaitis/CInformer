@@ -5,7 +5,7 @@
 CInformer
 =========
 
-A class written for Anax-MVC (Mikael Roos) 
+A class written for Anax-MVC (Mikael Roos)
  
 Built by Julius Semenas
  

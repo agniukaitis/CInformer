@@ -13,7 +13,6 @@ class CInformer
      */
     public $valid = array();
 
-
     /**
      * Constructor for CInformer.
      *
@@ -68,7 +67,10 @@ class CInformer
     public function clear()
     {
         $_SESSION['flash'] = null;
-        
         return true;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
