@@ -8,7 +8,6 @@ namespace Olive\CInformer;
  */
 class CInformer
 {
-
     /**
      * Properties
      */
@@ -25,7 +24,6 @@ class CInformer
         $this->valid = ['info', 'error', 'success', 'warning'];
     }
 
-    
     /**
      * Set the message into session variable
      *
@@ -73,5 +71,4 @@ class CInformer
         
         return true;
     }
-
 }
