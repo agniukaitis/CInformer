@@ -1,7 +1,11 @@
+[![Build Status](https://travis-ci.org/agniukaitis/CInformer.svg?branch=master)](https://travis-ci.org/agniukaitis/CInformer)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/agniukaitis/CInformer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/agniukaitis/CInformer/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/agniukaitis/CInformer/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/agniukaitis/CInformer/?branch=master)
+
 CInformer
 =========
- 
-A class written for Anax-MVC, which was originally written by Mikael Roos 
+
+A class written for Anax-MVC (Mikael Roos) 
  
 Built by Julius Semenas
  
